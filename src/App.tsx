@@ -412,8 +412,8 @@ const Team = () => {
     {
       title: 'Top Management & Leadership',
       members: [
-        { name: 'Rajeev Kumar', role: 'Managing Director', image: `${import.meta.env.BASE_URL}Director.jpeg` },
-        { name: 'Shubham Kumar', role: 'CEO / Founder' },
+        { name: 'Rajeev Kumar', role: 'Managing Director', image: `${import.meta.env.BASE_URL}Director.jpg` },
+        { name: 'Shubham Kumar', role: 'CEO / Founder', image: `${import.meta.env.BASE_URL}Shubham.jpg` },
         { name: 'Divesh Kumar', role: 'HR & Operation Director' }
       ]
     },
@@ -550,7 +550,7 @@ const Contact = () => {
                 <div>
                   <div className="text-slate-400 text-[10px] sm:text-sm font-bold uppercase tracking-wider mb-1">Visit Us</div>
                   <div className="text-xl sm:text-2xl font-bold">
-                    Begusarai, Bihar
+                    CROP.OFFICE :- Dhabauli,Begusarai(Bihar)-851129
                   </div>
                 </div>
               </div>
