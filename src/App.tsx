@@ -412,7 +412,7 @@ const Team = () => {
     {
       title: 'Top Management & Leadership',
       members: [
-        { name: 'Rajeev Kumar', role: 'Managing Director' },
+        { name: 'Rajeev Kumar', role: 'Managing Director', image: `${import.meta.env.BASE_URL}Director.jpeg` },
         { name: 'Shubham Kumar', role: 'CEO / Founder' },
         { name: 'Divesh Kumar', role: 'HR & Operation Director' }
       ]
@@ -479,9 +479,12 @@ const Team = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                 {category.members.map((member) => (
                   <div key={member.name} className="flex items-center gap-4 p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-100 group hover:bg-white hover:shadow-xl transition-all">
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-slate-200 flex items-center justify-center font-bold text-slate-500 group-hover:bg-yellow-400 group-hover:text-slate-900 transition-colors text-sm sm:text-base overflow-hidden">
-                      <span className="group-hover:hidden">{member.name.charAt(0)}</span>
-                      <img src={logoSrc} alt="Logo" className="hidden group-hover:block w-full h-auto scale-150" />
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-slate-200 overflow-hidden flex items-center justify-center text-sm sm:text-base">
+                      {member.image ? (
+                        <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+                      ) : (
+                        <span className="font-bold text-slate-500">{member.name.charAt(0)}</span>
+                      )}
                     </div>
                     <div>
                       <div className="font-bold text-slate-900 text-sm sm:text-base">{member.name}</div>
